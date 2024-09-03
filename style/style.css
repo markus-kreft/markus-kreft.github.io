@@ -1,0 +1,103 @@
+@font-face {
+/* Karla is licensed under the SIL Open Font License, Version 1.1. */
+  font-family: Karla;
+  src: url(./Karla-Regular.ttf);
+}
+:root {
+  --main-color: #ffffff;
+  --text-color: #000000;
+  --menuhover: #555555;
+  --hyperlink: #0000ff;
+  --hyperlink-hover: #4444bb;
+}
+@media (prefers-color-scheme: light, no-preference) {
+  :root {
+    --main-color: #ffffff;
+    --text-color: #000000;
+    --menuhover: #555555;
+    --hyperlink: #0000ff;
+    --hyperlink-hover: #4444bb;
+  }
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --main-color: #000000;
+    --text-color: #ffffff;
+    --menuhover: #aaaaaa;
+    --hyperlink: #00ffff;
+    --hyperlink-hover: #44bbbb;
+  }
+}
+
+html {
+  height: 100%;
+  overflow-y: hidden;
+}
+body {
+  height: 100%;
+  font-family: Karla, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--main-color);
+  color: var(--text-color);
+}
+.flex-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  position: relative;
+}
+
+.title {
+text-transform: uppercase;
+  text-align: center;
+  font-size: 16px;
+  margin: .8em;
+  color: #b1101f;
+}
+h1 {
+  color: #666666;
+  font-size: 30px;
+}
+
+.menu {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  font-size: 16px;
+  text-align: center;
+  margin: 0.5em;
+}
+.menu div {
+  display: inline;
+  margin: 0.5em;
+  margin-right: 1.1em;
+  margin-left: 1.1em;
+}
+.menu a {
+  text-align: center;
+  color: var(--text-color);
+  display: block;
+  padding: 2px;
+  text-decoration: none;
+}
+a:hover {
+  color: var(--menuhover);
+}
+
+.content {
+  top: 80%;
+  font-size: 16px;
+  justify-content: center;
+  text-align: center;
+  margin: 0.5em;
+}
+.content a {
+  color: var(--hyperlink);
+  padding: 2px;
+  text-decoration: none
+}
+.content a:hover {
+  color: var(--hyperlink-hover);
+}
